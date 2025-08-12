@@ -18,6 +18,9 @@ body {
   color: $white;
   width: 21.875rem;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .social-card__image {

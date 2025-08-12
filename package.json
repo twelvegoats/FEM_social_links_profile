@@ -1,0 +1,27 @@
+{
+  "name": "fem_social_links_profile",
+  "version": "1.0.0",
+  "description": "![Design preview for the Social links profile coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "sass scss/main.scss dist/main.css",
+    "watch-css": "sass --watch scss/main.scss dist/main.css",
+    "build": "npm run build-css",
+    "dev": "npm run watch-css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twelvegoats/FEM_social_links_profile.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/twelvegoats/FEM_social_links_profile/issues"
+  },
+  "homepage": "https://github.com/twelvegoats/FEM_social_links_profile#readme",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

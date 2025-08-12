@@ -1,3 +1,12 @@
+// Font import
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter-VariableFont_slnt,wght.ttf')
+    format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 // Colors
 $green: hsl(75, 94%, 57%);
 $white: hsl(0, 0%, 100%);
@@ -7,7 +16,7 @@ $grey-900: hsl(0, 0%, 8%);
 
 // Typography
 $body-copy: 0.875rem;
-$font-family: Inter, sans-serif;
+$font-family: 'Inter', sans-serif;
 $font-weight-regular: 400;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;

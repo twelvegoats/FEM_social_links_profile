@@ -31,6 +31,20 @@ body {
 
 .social-card__name {
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: $font-weight-regular;
   margin-top: $spacing-medium;
+}
+
+.social-card__location {
+  font-size: 0.875rem;
+  font-weight: $font-weight-semibold;
+  margin-top: $spacing-small;
+  color: $green;
+}
+
+.social-card__bio {
+  font-size: 0.875rem;
+  font-weight: $font-weight-regular;
+  margin-top: $spacing-large;
+  text-align: center;
 }

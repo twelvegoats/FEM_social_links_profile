@@ -3,6 +3,7 @@
 body {
   background-color: $grey-900;
   min-height: 100vh;
+  font-family: $font-family;
 }
 
 .social-card {
@@ -10,5 +11,5 @@ body {
   border-radius: 0.5rem;
   padding: 1rem;
   color: $white;
-  width: 23.438rem;
+  width: 21.875rem;
 }

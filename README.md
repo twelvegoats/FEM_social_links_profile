@@ -6,7 +6,7 @@
 
 This project is a solution to the [Social Links Profile challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ). It's a responsive social media profile card that showcases interactive hover states and clean design principles.
 
-**Live Demo:** [View Live Site](#) <!-- Add your deployed URL here -->
+**Live Demo:** [View Live Site](https://twelvegoats.github.io/FEM_social_links_profile/)
 
 ## What I Learned
 

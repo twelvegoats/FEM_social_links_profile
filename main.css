@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 8%);
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.social-card {
+  background-color: hsl(0, 0%, 12%);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  width: 21.875rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.social-card__image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.social-card__name {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.social-card__location {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: hsl(75, 94%, 57%);
+}
+
+.social-card__bio {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.social-card__links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.social-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 20%);
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+.social-card__link:hover {
+  background-color: hsl(75, 94%, 57%);
+  color: hsl(0, 0%, 8%);
+}
+.social-card__link:last-child {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

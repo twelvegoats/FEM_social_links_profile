@@ -1,93 +1,159 @@
-# Frontend Mentor - Social links profile
+# Social Links Profile - Frontend Mentor Challenge
 
-![Design preview for the Social links profile coding challenge](./preview.jpg)
+![Social Links Profile Preview](./preview.jpg)
 
-## Welcome! 👋
+## Overview
 
-Thanks for checking out this front-end coding challenge.
+This project is a solution to the [Social Links Profile challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ). It's a responsive social media profile card that showcases interactive hover states and clean design principles.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+**Live Demo:** [View Live Site](#) <!-- Add your deployed URL here -->
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+## What I Learned
 
-## The challenge
+### SCSS Architecture & Organization
 
-Your challenge is to build out this social links profile and get it looking as close to the design as possible.
+This project was an excellent opportunity to dive deep into **SCSS (Sass)** and learn proper CSS architecture patterns. Here's what I implemented:
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+#### 📁 File Structure
 
-Your users should be able to: 
+I organized my SCSS using a modular approach:
 
-- See hover and focus states for all interactive elements on the page
+```
+scss/
+├── main.scss           # Main entry point
+├── utils/
+│   └── _variables.scss # Color palette, typography, spacing
+├── base/
+│   ├── _resets.scss   # CSS resets
+│   └── _base.scss     # Base component styles
+```
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+#### 🎨 SCSS Variables
 
-## Where to find everything
+I learned to create a comprehensive design system using SCSS variables:
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+```scss
+// Color System
+$green: hsl(75, 94%, 57%);
+$white: hsl(0, 0%, 100%);
+$grey-700: hsl(0, 0%, 20%);
+$grey-800: hsl(0, 0%, 12%);
+$grey-900: hsl(0, 0%, 8%);
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+// Typography Scale
+$body-copy: 0.875rem;
+$font-family: 'Inter', sans-serif;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+// Consistent Spacing
+$spacing-small: 0.5rem;
+$spacing-medium: 1rem;
+$spacing-large: 1.5rem;
+```
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+#### 🔧 SCSS Features Utilized
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+1. Partials & Imports: Used `@use` directive for better module management
+2. Variables: Created a consistent design token system
+3. Nesting: Organized related styles hierarchically
+4. Mixins: (Future enhancement opportunity)
+5. Functions: (Future enhancement opportunity)
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### CSS Techniques Mastered
 
-## Building your project
+#### Flexbox Layout
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+```
+.social-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+.social-card__links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+```
 
-## Deploying your project
+#### Interactive States
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+```
+.social-card__link {
+  transition: background-color 0.3s ease;
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+  &:hover {
+    background-color: $green;
+    color: $grey-900;
+  }
+}
+```
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+#### BEM Methodology
 
-## Create a custom `README.md`
+I implemented BEM (Block Element Modifier) naming convention:
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+- Block: `.social-card`
+- Elements: `.social-card__name`, `.social-card__link`, `.social-card__bio`
+- Modifiers: (Used for state variations)
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+### Responsive Design Principles
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+- Mobile-first approach
+- Flexible units (rem, %)
+- Proper viewport meta tag
+- Scalable typography
 
-## Submitting your solution
+### Accessibility Considerations
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+- Semantic HTML structure
+- Proper alt text for images
+- Focus states for interactive elements
+- Color contrast compliance
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+## Technologies Used
 
-## Sharing your solution
+- HTML5: Semantic markup
+- SCSS/Sass: CSS preprocessing
+- CSS3: Modern styling techniques
 
-There are multiple places you can share your solution:
+## Key Features
 
-1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+- ✅ Responsive design that works on all devices
+- ✅ Interactive hover states with smooth transitions
+- ✅ Clean, modern design following the provided mockups
+- ✅ Accessible markup and styling
+- ✅ Organized SCSS architecture
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+## Lessons Learned
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+### SCSS Benefits I Discovered:
 
-## Got feedback for us?
+1.  Better Organization: Splitting styles into logical partials made the codebase much more maintainable
+2.  Design Consistency: Variables ensured consistent spacing, colors, and typography throughout
+3.  Scalability: The modular structure makes it easy to add new components
+4.  Developer Experience: Features like nesting and variables made writing CSS more enjoyable
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+### Areas for Future Improvement:
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+- Implement SCSS mixins for repeated patterns
+- Add CSS custom properties for runtime theming
+- Explore SCSS functions for dynamic calculations
+- Add more sophisticated responsive breakpoint management
 
-**Have fun building!** 🚀
+## Author
+
+**Sean Wildman**
+
+GitHub: [@twelvegoats](https://github.com/twelvegoats)
+
+Frontend Mentor: [@twelvegoats](https://www.frontendmentor.io/profile/twelvegoats)
+
+## Acknowledgments
+
+- Challenge by [Frontend Mentor](https://www.frontendmentor.io/)
+
+_This project represents my journey in learning SCSS and modern CSS architecture. Each commit shows progression in understanding modular CSS and design system thinking._
